@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Профиль"  android:icon="@drawable/prof_pic" android:id="@+id/FFrag"/>
+    <item android:title="Заявка"  android:icon="@drawable/zay_pic" android:id="@+id/SFrag"/>
+    <item android:title="Склад"  android:icon="@drawable/sklad_pic" android:id="@+id/THRFrag"/>
+</menu>

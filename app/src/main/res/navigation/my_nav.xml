@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/FFrag">
+
+    <fragment
+        android:id="@+id/FFrag"
+        android:name="com.example.projector.FFrag"
+        android:label="fragment_f"
+        tools:layout="@layout/fragment_f" />
+    <fragment
+        android:id="@+id/SFrag"
+        android:name="com.example.projector.SFrag"
+        android:label="fragment_s"
+        tools:layout="@layout/fragment_s" />
+    <fragment
+        android:id="@+id/THRFrag"
+        android:name="com.example.projector.THRFrag"
+        android:label="fragment_t_h_r"
+        tools:layout="@layout/fragment_t_h_r" />
+</navigation>

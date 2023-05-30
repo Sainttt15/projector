@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "893213573104",
+    "project_id": "projector-3ab5a",
+    "storage_bucket": "projector-3ab5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893213573104:android:242df03f6eb72aab256735",
+        "android_client_info": {
+          "package_name": "com.example.projector"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBihaod0Lf2avkTZrP2BcxhB2ozTkdztrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
