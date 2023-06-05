@@ -1,5 +1,6 @@
 package com.example.projector;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,16 @@ public class SFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_s, container, false);
+        View view = inflater.inflate(R.layout.fragment_s, container, false);
+        FloatingActionButton plusbt = view.findViewById(R.id.plusbt);
+        plusbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addtask = new Intent(getActivity(),Addtask.class);
+                startActivity(addtask);
+            }
+        });
+        return view;
+
     }
 }

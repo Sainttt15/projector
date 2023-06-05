@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class RegWind extends AppCompatActivity {
 
@@ -33,6 +34,7 @@ public class RegWind extends AppCompatActivity {
     public void RegApply(View view) {
         EditText email = findViewById(R.id.LogEditText);
         EditText password = findViewById(R.id.PassEditText);
+        EditText FIO = findViewById(R.id.FIOEditText);
         mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -40,6 +42,8 @@ public class RegWind extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "createUserWithEmail:successs");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            UserProfileChangeRequest prof = new UserProfileChangeRequest.Builder().setDisplayName(FIO.getText().toString()).build();
+                            user.updateProfile(prof);
                             Toast.makeText(RegWind.this, "Регистрация прошла успешно!", Toast.LENGTH_SHORT).show();
                             Intent back = new Intent(RegWind.this, MainActivity.class);
                             startActivity(back);
