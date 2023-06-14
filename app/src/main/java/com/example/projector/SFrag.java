@@ -63,14 +63,6 @@ public class SFrag extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_s, container, false);
-        FloatingActionButton plusbt = view.findViewById(R.id.plusbt);
-        plusbt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent addtask = new Intent(getActivity(),Addtask.class);
-                startActivity(addtask);
-            }
-        });
         return view;
 
     }
